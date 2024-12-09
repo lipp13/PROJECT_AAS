@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>From Data Master Produk</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>FROM DATA MASTER PRODUK</h1>
+        <form id="dataForm">
+            <label for="kodeproduk">Kode Produk</label>
+            <input type="text" id="kodeproduk" value="MD-01" readonly>
+
+            <label for="namaproduk">Nama Produk</label>
+            <input type="text" id="namaproduk" placeholder="Masukkan Nama Makanan/Minuman">
+
+            <label for="kategori">Kategori</label>
+            <select name="kategori" id="kategori">
+                <option value="" disabled selected>Pilih Kategori</option>
+                <option value="makanan">Makanan</option>
+                <option value="minuman">Minuman</option> 
+            </select>
+
+            <label for="satuan">Satuan Produk</label>
+            <select name="satuan" id="satuan">
+                <option value="" disabled selected>Pilih Satuan</option>
+                <option value="Porsi">Porsi</option>
+                <option value="Gelas">Gelas</option>
+                <option value="Potong">Potong</option>
+                <option value="Bungkus">Bungkus</option>
+                <option value="Tusuk">Tusuk</option>
+            </select>
+
+            <label for="hargaproduk">Harga Produk</label>
+            <input type="number" name="hargaproduk" id="hargaproduk" placeholder="Masukkan Harga">
+
+            <label for="urlimage">URL Gambar</label>
+            <input type="url" name="urlimage" id="urlimage" placeholder="Masukkan URL Gambar">
+
+            <label for="stokproduk">Stok Awal</label>
+            <input type="number" name="stokproduk" id="stokproduk" placeholder="Masukkan Stok">
+            <button type="button" onclick="saveForm()">Tambah</button>
+        </form>
+        <section>
+            <table id="productTable">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Kode Produk</th>
+                        <th>Nama Produk</th>
+                        <th>Satuan</th>
+                        <th>Kategori</th>
+                        <th>Harga Produk</th>
+                        <th>Gambar Produk</th>
+                        <th>Stok Produk</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
